@@ -1,0 +1,11 @@
+kind: PersistentVolumeClaim
+apiVersion: v1
+metadata:
+  name: local-nfs
+spec:
+  accessModes:
+    - ReadWriteMany
+  storageClassName: local-nfs
+  resources:
+    requests:
+      storage: 16Gi
