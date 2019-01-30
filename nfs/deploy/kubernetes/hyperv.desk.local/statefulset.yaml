@@ -38,6 +38,8 @@ spec:
       labels:
         app: nfs-provisioner
     spec:
+      nodeSelector:
+        storage: max
       serviceAccount: nfs-provisioner
       terminationGracePeriodSeconds: 10
       containers:
@@ -79,3 +81,4 @@ spec:
         - name: export-volume
           hostPath:
             path: /srv/nfs
+            type: DirectoryOrCreate

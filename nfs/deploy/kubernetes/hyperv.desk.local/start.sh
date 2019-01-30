@@ -2,8 +2,8 @@
 
 for yml in statefulset.yaml claim.yaml ; do
 	kubectl create -f $yml
-	sleep 10
+	sleep 1
 done
 
-kubectl create -f write-pod.yaml
+#kubectl create -f write-pod.yaml
 
